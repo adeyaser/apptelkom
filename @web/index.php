@@ -133,6 +133,7 @@ session_start();
        // echo $_GET['modul'];
         error_reporting(error_reporting() & ~E_NOTICE);
         include "koneksi.php";
+        if ($date1 > $date2) { header('location:logout.php');}
           if ($_GET['modul'] == 'home') { include "home.php";}
           // Controll User
               else if($_GET['modul']== 'users'){include "mod_users/users.php";}
